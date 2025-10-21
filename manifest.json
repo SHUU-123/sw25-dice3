@@ -1,0 +1,20 @@
+{
+  "name": "Sword World 2.5 ダイスロール",
+  "short_name": "SW2.5 Dice",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#0b1220",
+  "theme_color": "#0b1220",
+  "icons": [
+    {
+      "src": "dice-icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "dice-icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

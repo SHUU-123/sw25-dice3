@@ -144,11 +144,6 @@ footer{grid-column:1/-1; text-align:right; color:var(--muted); font-size:12px; m
     <button class="btn" data-roll="2d6+7">2d6+7</button>
     <button class="btn" data-roll="2d6+8">2d6+8</button>
   </div>
-
-  <!-- ▼ 任意ダイス -->
-<div style="margin-top:8px"><strong>任意ダイス</strong></div>
-<div class="controls" id="anyDice"></div>
-<!-- ▲ 任意ダイス -->
   
   <div style="margin-top:8px"><strong>カスタム</strong></div>
   <div style="display:flex; gap:8px; margin-top:8px;">
@@ -253,17 +248,6 @@ document.addEventListener('DOMContentLoaded',()=>{
     navigator.clipboard?.writeText(txt);alert('コピーしました:\n'+txt);
   };
 });
-
-  // ▼ 任意ダイスボタン生成
-const anyDiceContainer = document.getElementById('anyDice');
-for(let i=2;i<=100;i++){
-  const btn=document.createElement('button');
-  btn.className='btn';
-  btn.textContent=`1d${i}`;
-  btn.dataset.roll=`1d${i}`;
-  btn.onclick=()=>doRoll(`1d${i}`);
-  anyDiceContainer.appendChild(btn);
-}
   
 /* ▼ Service Worker 登録 */
 if('serviceWorker' in navigator){
